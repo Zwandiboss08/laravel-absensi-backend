@@ -21,5 +21,18 @@ class DatabaseSeeder extends Seeder
             'email' => 'stefanus@anugrahjaya.com',
             'password' => Hash::make('123456'),
         ]);
+
+        //data dummy for company
+
+        \App\Models\Company::create([
+            'name' => 'PT. Anugrah Jaya',
+            'email' => 'admin@anugrahjaya.com',
+            'address' => 'Jl. Jend. Sudirman No. 1',
+            'latitude' => '-6.175110',
+            'longitude' => '106.827220',
+            'radius_km' => '5',
+            'time_in' => '08:00',
+            'time_out' => '17:00',
+        ]);
     }
 }

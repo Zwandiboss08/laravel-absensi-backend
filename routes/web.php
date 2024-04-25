@@ -13,4 +13,5 @@ Route::middleware(['auth'])->group(function () {
     })->name('home');
 
     Route::resource('users', UserController::class);
+    Route::resource('companies', \App\Http\Controllers\CompanyController::class);
 });
