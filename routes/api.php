@@ -24,3 +24,11 @@ Route::post('/checkout', [\App\Http\Controllers\Api\AttendanceController::class,
 
 //update profile
 Route::post('/update-profile', [\App\Http\Controllers\Api\AuthController::class, 'updateProfile'])->middleware('auth:sanctum');
+
+//create permission
+Route::post('/create-permission', [\App\Http\Controllers\Api\PermissionController::class, 'store'])->middleware('auth:sanctum');
+// cara lain bisa di bawah
+// Route::apiResource('/api-permissions', \App\Http\Controllers\Api\PermissionController::class)->middleware('auth:sanctum');
+
+//notes
+Route::apiResource('/api-notes', \App\Http\Controllers\Api\NoteController::class)->middleware('auth:sanctum');
